@@ -3,6 +3,7 @@
 1. Navigate to a your developer folder or create a new : `mkdir AngularAppsFolder`
 1. git clone your fork into this folder
 1. cd into folder
+1. `npm install`
 1. Open the project in your text editor so we can see what we're doing with each of these steps: `code .`
 1. Take a moment to look at the folders and files you created with that one command: `e2e`, `node_modules`, `src`, `environment`, config files and 7 `.json` files, as well as a `.gitignore` file which means this directory has been initialized as a git repo!
 1. Before we get off and running let's get our project bootstrapped so it's a little more visually appealing and intuitive. Run `npm install bootstrap --save`
@@ -28,7 +29,7 @@
 
     * This is telling Angular that when it builds the app to look for styles FIRST in the node_modules folder and find the bootstrap code which will tell the browser how to render our components.
 
-1. run `ng serve --open` to serve your application through localhost:4200 and open it in your browser. **You should see a screen to select different option which will either take you to another website or show you the CLI commands that will give you what you're wanting.**
+1. run `npm start` to serve your application through localhost:4200 and open it in your browser. Since we haven't done anything yet, the page should be blank.
 
 
 
@@ -67,11 +68,8 @@
     ```
 
 1. Since we want to be able to see these items in our browser let's create some visual representation of this list...
-1. In the app template: `app.component.html` you'll see some placeholder comments and code that rendered the landing page we mentioned above. Go ahead a delete the code between lines 9 and 528 or what's between the `<!--* * * * * * * -->` on line 8 and `<!--* * * * * * * -->` on line 530.
-
-    * **Be sure to keep the very last line: `<router-outlet></router-outlet>`, this pulls all of your application together!**
-
-1. Then add a header: `<h1 align="center">Todo List</h1>`
+1. In the app template: `app.component.html` start on line 9
+1. Add a header: `<h1 align="center">Todo List</h1>`
 1. Next we need to iterate over the todoList we created in the `app.component.ts`. This is accomplished using `*ngFor` directive we covered in the pre-course work.
 1. Below the Todo List `h1` header paste in this code:
 
