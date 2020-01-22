@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -8,22 +8,23 @@ import { Component } from "@angular/core";
 // export class AppComponent {
 //   title = 'NG421wk1day1ToDoApp';
 // }
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "Todos";
   todoList: any[] = [];
   todoTitle: string;
+
   ngOnInit() {
     this.todoTitle = "";
     this.todoList = [{ title: "Install Angular CLI", isDone: false }];
   }
   // add method
-  addTodo():void {
+  addTodo(): void {
     this.todoList.push({
       title: this.todoTitle,
-    isDone: false
+      isDone: false
     });
     //reset to empty string
-    this.todoTitle = '';
+    this.todoTitle = "";
   }
   // delete method
   deleteTodo(todo: any) {
